@@ -24,15 +24,15 @@ Anda telah belajar hal-hal berikut.
 Untuk mempelajari modul berikutnya, kirimkan proyek aplikasi web dengan tema Katalog Restoran. Aplikasi memiliki satu halaman statis yang menampilkan daftar restoran sesuai dengan data yang diberikan.
 
 ## Kriteria
-- [*] App Bar (Navigation Bar)
-- [*] ero Element (Jumbotron Element)
-- [*] Daftar Restoran
-- [*] Footer
-- [*] Responsibilitas Tampilan (menggunakan grid, flexbox)
-- [*] Aksesibilitas Website
+- [x] App Bar (Navigation Bar)
+- [x] ero Element (Jumbotron Element)
+- [x] Daftar Restoran
+- [x] Footer
+- [x] Responsibilitas Tampilan (menggunakan grid, flexbox)
+- [x] Aksesibilitas Website
 
 ## Kriteria Opsional
-- [*] Menerapkan tampilan aplikasi yang menarik
-- [*] Terdapat konten tambahan yang relevan dengan tema aplikasi atau di luar dari data yang disediakan. (dalam hal ini, data yang ditambahkan berupa kategori dari makanan)
-- [*] Menggunakan elemen secara bijak sesuai dengan fungsinya
-- [*] Telah menggunakan css preprocessor (SASS)
+- [x] Menerapkan tampilan aplikasi yang menarik
+- [x] Terdapat konten tambahan yang relevan dengan tema aplikasi atau di luar dari data yang disediakan. (dalam hal ini, data yang ditambahkan berupa kategori dari makanan)
+- [x] Menggunakan elemen secara bijak sesuai dengan fungsinya
+- [x] Telah menggunakan css preprocessor (SASS)
