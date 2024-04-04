@@ -1,0 +1,80 @@
+@use "variables" as var
+@use "mixin" as mix
+
+#header
+  @include mix.doFlexBox()
+  padding: 12px
+  position: relative
+
+  #header-wrapper
+    max-width: 1000px
+    width: 100%
+    @include mix.doFlexBox(space-between, center)
+
+    #brand
+      min-width: 44px
+      min-height: 44px
+      #brand-link-name, #brand-link-initial
+        font-size: 1.2rem
+        font-weight: bold
+        color: var.$primary
+
+      #brand-link-initial
+        @media (min-width: var.$tablet)
+          display: none
+
+      #brand-link-name
+        display: none
+        @media (min-width: var.$tablet)
+          display: inline
+
+    #navigations
+      display: none
+      @media (min-width: var.$tablet)
+        @include mix.doFlexBox()
+        gap: 12px
+
+      .nav-item
+        color: var.$dark
+        min-height: 44px
+        min-width: 44px
+
+    #hamburger
+      min-width: 44px
+      min-height: 44px
+      @include mix.doFlexBox()
+      background-color: transparent
+      border: none
+      @media (min-width: var.$tablet)
+        display: none
+
+      img
+        width: 28px
+
+    #nav-drawer
+      position: absolute
+      height: 100vh
+      z-index: 999
+      width: 50%
+      background-color: white
+      right: 0
+      top: 0
+      padding: 12px
+
+    #nav-drawer.show
+      @include mix.doFlexBox(start, start, column)
+      gap: 4px
+
+      #close-drawer
+        background-color: transparent
+        border: none
+        margin-left: auto
+
+        img
+          width: 24px
+
+      .nav-item
+        color: var.$dark
+
+    #nav-drawer.hide
+      display: none

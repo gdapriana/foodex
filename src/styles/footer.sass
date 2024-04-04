@@ -1,0 +1,15 @@
+@use "variables" as var
+@use "mixin" as mix
+
+#footer
+  width: 100%
+  @include mix.doFlexBox()
+
+  .footer
+    padding: 12px
+    color: var.$primary
+    @include mix.doFlexBox()
+
+    p
+      text-align: center
+
