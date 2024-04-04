@@ -1,5 +1,5 @@
 {
-  "name": "restaurant-apps",
+  "name": "fodex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "prettier": "prettier --write ."
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "gedeapriana <gedeapriana36@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.9",
