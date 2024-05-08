@@ -1,134 +1,57 @@
-@use "variables" as var
-@use "mixin" as mix
+@use 'others/mixin' as mix
+@use 'others/colors' as col
+@use 'others/sizes' as siz
+@import 'header/index'
+@import 'main/index'
+@import 'footer/index'
+@import 'components/index'
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap')
 
-#main
-  @include mix.doFlexBox(start, center, column)
-  gap: 32px
-  padding: 12px
+html
+  scroll-behavior: smooth
 
-  #hero-wrapper
-    max-width: var.$desktop
-    width: 100%
-    @include mix.doFlexBox()
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: "Outfit", sans-serif
+  font-optical-sizing: auto
 
-    #hero-image
+*::-webkit-scrollbar
+  display: none
+
+body
+  width: 100%
+  height: 100vh
+  @include mix.centerWithFlex(start, stretch, column, 0)
+  
+  #main
+    flex-grow: 1
+    flex-basis: 0
+    overflow: auto
+
+  #header, #main, #footer
+    @include mix.centerWithFlex(center, start, row, 0)
+    .root-wrapper
       width: 100%
-      border-radius: 20px
-      @media (min-width: var.$desktop)
-        width: 1000px
+      padding: siz.$defaultSize * 2
+      @media (min-width: siz.$xl)
+        padding: siz.$defaultSize * 4 0
+        max-width: siz.$lg
 
-  #restaurant-wrapper
-    max-width: 1000px
-    width: 100%
-    gap: 16px
-    @include mix.doFlexBox(start, stretch, column)
+  #header
+    border-bottom: 2px solid col.$slate-100
+    
+  #footer
+    border-top: 2px solid col.$slate-100
 
-    .section-header
-      @include mix.doFlexBox()
-      .section-header-text
-        font-size: 1rem
-        color: var.$primary
-        @include mix.smoothTransition()
-        @media (min-width: var.$tablet)
-          font-size: 1.2rem
+a
+  text-decoration: none
 
-    #restaurant-list-wrapper
-      display: grid
-      gap: 16px
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
-
-      .restaurant-card
-        border: 1px solid var.$border
-        border-radius: 16px
-        overflow: hidden
-        @include mix.doFlexBox(start, stretch, column)
-
-        .restaurant-card-image
-          position: relative
-          overflow: hidden
-
-          .restaurant-location
-            position: absolute
-            left: 0
-            top: 0
-            background-color: var.$primary
-            color: var.$border
-            margin: 16px
-            font-weight: bold
-            padding: 4px 8px
-            border-radius: 999em
-            font-size: .8rem
-
-          img
-            width: 100%
-            aspect-ratio: 16/9
-            object-fit: cover
-
-        .restaurant-card-desc
-          padding: 16px
-          @include mix.doFlexBox(start, stretch, column)
-          gap: 2px
-
-          .restaurant-food-rating
-            font-size: .9rem
-            color: var.$dark
-            @include mix.doFlexBox(start)
-            gap: 2px
-            font-weight: bold
-
-            img
-              width: 16px
-
-          .restaurant-food-name
-            color: var.$primary
-            font-size: 1.1rem
-
-          .restaurant-food-desc
-            font-size: .9rem
-            color: var.$muted-foreground
-            overflow: hidden
-            display: -webkit-box
-            -webkit-box-orient: vertical
-            -webkit-line-clamp: 3
-
-  #categories-wrapper
-    max-width: 1000px
-    width: 100%
-    gap: 16px
-    @include mix.doFlexBox(start, stretch, column)
-
-    .section-header
-      @include mix.doFlexBox()
-      .section-header-text
-        font-size: 1rem
-        color: var.$primary
-        @include mix.smoothTransition()
-        @media (min-width: var.$tablet)
-          font-size: 1.2rem
-
-
-    #categories-list-wrapper
-      display: grid
-      gap: 16px
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
-
-      .category-card
-        border: 1px solid var.$border
-        border-radius: 16px
-        overflow: hidden
-        padding: 12px
-        background-size: cover
-        background-position: center
-        @include mix.doFlexBox(start, stretch, column)
-
-        .category-title
-          color: var.$primary
-          font-size: 1.1rem
-
-        .category-desc
-          font-size: .9rem
-          color: var.$muted-foreground
-          overflow: hidden
-          display: -webkit-box
-          -webkit-box-orient: vertical
-          -webkit-line-clamp: 2
+a,
+input,
+button,
+textarea
+  display: inline-block
+  min-width: 44px
+  min-height: 44px

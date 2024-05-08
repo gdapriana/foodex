@@ -1,0 +1,41 @@
+@use '../others/mixin' as mix
+@use '../others/sizes' as siz
+@use '../others/colors' as col
+
+#hero
+  width: 100%
+  height: 500px
+  background-size: cover
+  background-position: center
+  border-radius: siz.$defaultSize * 8
+  padding: siz.$defaultSize * 8
+  @include mix.centerWithFlex(center, end, row)
+  @media (min-width: siz.$md)
+    aspect-ratio: 16/9
+    height: auto
+
+  article
+    width: 100%
+    @include mix.centerWithFlex(start, center, column)
+    @media(min-width: siz.$md)
+      width: 50%
+    
+    h1
+      color: white
+      span
+        color: col.$cyan-700
+    
+    h3
+      font-weight: 100 
+      color: col.$cyan-100
+      text-align: center
+
+    a
+      margin-top: siz.$defaultSize * 6 
+      color: white
+      background-color: col.$cyan-500
+      @include mix.centerWithFlex()
+      padding: siz.$defaultSize * 4 siz.$defaultSize * 6
+      font-size: 1.2rem
+      font-weight: bold
+      border-radius: siz.$defaultSize * 4
