@@ -7,47 +7,31 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#6366f1" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="/app.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/icon-128.png" />
+
     <title>Foodex</title>
   </head>
   <body>
-    <a href="#restaurant-wrapper" class="skip-link">Skip to content</a>
+    <a class="jump-to-main" href="#main">Go to restaurant list</a>
+
     <header id="header">
-      <section id="header-wrapper">
-        <my-brand></my-brand>
-        <nav id="navigations"></nav>
+      <div id="header-wrapper">
+        <custom-brand></custom-brand>
         <button id="hamburger">
-          <img src="/images/hamburger/hamburger.svg" alt="hamburger button">
+          <img class="hamburger-logo" src="/hamburger.png" alt="hamburger button" />
         </button>
-        <nav id="nav-drawer" class="hide">
-          <button id="close-drawer">
-            <img src="/images/hamburger/close.svg" alt="close drawer button">
-          </button>
-        </nav>
-      </section>
+        <nav id="navigationDrawer"></nav>
+      </div>
     </header>
-    <main id="main">
-      <section id="hero-wrapper">
-        <img
-          id="hero-image"
-          src="/images/hero/hero-image.jpg"
-          alt="hero image"
-        />
-      </section>
-      <section id="restaurant-wrapper">
-        <my-header title="Explore Restaurant"></my-header>
-        <div id="restaurant-list-wrapper">
-          <!-- list all restaurants here -->
-        </div>
-      </section>
-      <section id="categories-wrapper">
-        <my-header title="Find your favorite categories"></my-header>
-        <div id="categories-list-wrapper">
-          <!-- list all categories here -->
-        </div>
-      </section>
+
+    <main id="main" tabindex="0">
+      <div id="main-wrapper"></div>
     </main>
     <footer id="footer">
-      <my-footer></my-footer>
+      <custom-footer></custom-footer>
     </footer>
   </body>
 </html>

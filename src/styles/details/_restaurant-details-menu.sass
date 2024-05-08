@@ -1,0 +1,21 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+.menu-container
+  @include mix.centerWithFlex(start, stretch, column, 12px)
+
+  .menu-wrapper
+    display: grid
+    gap: 8px
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+
+    .menu-item
+      padding: 8px
+      border: 1px var.$border-color solid
+      @include mix.smoothTransition()
+      border-radius: 8px
+      text-align: center
+      &:hover
+        background-color: var.$indigo-color
+        color: var.$white-color
+        cursor: pointer

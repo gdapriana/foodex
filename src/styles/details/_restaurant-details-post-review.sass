@@ -1,0 +1,33 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+#review-form-container
+  @include mix.centerWithFlex(start, stretch, column, 16px)
+  margin-top: 56px
+
+  #form-review
+    @include mix.centerWithFlex(start, stretch, column, 16px)
+
+    .form-label
+      @include mix.centerWithFlex(start, stretch, column, 12px)
+
+      input, textarea
+        padding: 10px
+        border: 1px solid var.$border-color
+        border-radius: 6px
+
+      span
+        color: var.$black-color
+
+    button
+      padding: 16px
+      background-color: var.$indigo-color
+      border: none
+      color: var.$white-color
+      font-weight: bold
+      font-size: 1.1rem
+      border-radius: 6px
+      cursor: pointer
+      @include mix.smoothTransition()
+      &:hover
+        opacity: .8

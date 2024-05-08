@@ -1,5 +1,6 @@
 class Header extends HTMLElement {
   static observedAttributes = ['title'];
+
   constructor() {
     super();
     this._title = this.getAttribute('title');
@@ -12,4 +13,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define('my-header', Header);
+customElements.define('custom-header', Header);

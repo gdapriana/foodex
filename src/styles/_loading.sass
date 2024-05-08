@@ -1,0 +1,22 @@
+@use "variables" as var
+@use "mixin" as mix
+
+.loading
+  position: absolute
+  background-color: var.$white-color
+
+.loading-home
+  width: 100%
+  height: 200px
+  max-width: 1000px
+
+.loading-details
+  width: 100%
+  height: 500px
+
+.loading.hide
+  display: none
+
+.loading.show
+  @include mix.centerWithFlex()
+

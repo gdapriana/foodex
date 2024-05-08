@@ -1,3 +1,4 @@
-import './brand.js';
-import './header.js';
-import './footer.js';
+import './brand';
+import './hamburger';
+import './navigationsDrawer';
+import './header';

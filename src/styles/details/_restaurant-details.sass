@@ -1,0 +1,14 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+#restaurant-details-container
+  position: relative
+  width: 100%
+  max-width: var.$content-width
+
+  #restaurant-details-wrapper
+    width: 100%
+    @include mix.centerWithFlex(start, stretch, column, 56px)
+
+
+

@@ -1,0 +1,20 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+.restaurant-review
+  @include mix.centerWithFlex(start, stretch, column, 20px)
+
+  .reviews-wrapper
+    @include mix.centerWithFlex(start, stretch, column, 16px)
+
+    .review-item
+      border: 1px solid var.$border-color
+      padding: 12px
+      @include mix.centerWithFlex(start, stretch, column, 16px)
+
+      p
+        font-weight: bold
+        color: var.$indigo-color
+
+      span
+        color: var.$gray-color

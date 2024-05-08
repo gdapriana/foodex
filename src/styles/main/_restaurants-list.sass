@@ -1,0 +1,13 @@
+@use "../variables" as var
+@use "../mixin" as mix
+
+#restaurants-list-container
+  width: 100%
+  @include mix.centerWithFlex(start, stretch, column, 12px)
+  max-width: var.$content-width
+
+  #restaurants-list-wrapper
+    display: grid
+    gap: 24px
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+

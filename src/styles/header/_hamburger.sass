@@ -1,0 +1,14 @@
+@use "../variables" as var
+@use "../mixin" as mix
+
+#hamburger
+  @include mix.centerWithFlex()
+  cursor: pointer
+  border: none
+  background-color: transparent
+
+  @media (min-width: var.$lg)
+    display: none
+
+  .hamburger-logo
+    width: 42px

@@ -1,8 +1,9 @@
-@mixin doFlexBox($justify-content: center, $align-items: center, $flex-direction: row)
+@mixin centerWithFlex($justify: center, $items: center, $direction: row, $gap: 4px)
   display: flex
-  justify-content: $justify-content
-  align-items: $align-items
-  flex-direction: $flex-direction
+  justify-content: $justify
+  align-items: $items
+  flex-direction: $direction
+  gap: $gap
 
 @mixin smoothTransition($duration: .3s)
   transition: all ease-in-out $duration

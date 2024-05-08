@@ -1,0 +1,13 @@
+@use "../mixin" as mix
+@use "../variables" as var
+
+#header
+  width: 100%
+  @include mix.centerWithFlex()
+  border-bottom: var.$border-color 1px solid
+
+  #header-wrapper
+    width: 100%
+    max-width: var.$content-width
+    padding: 16px
+    @include mix.centerWithFlex(space-between, center)

@@ -1,0 +1,8 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+.restaurant-details-image
+  width: 100%
+  border-radius: 15px
+  @media (min-width: var.$max-width)
+    width: var.$content-width

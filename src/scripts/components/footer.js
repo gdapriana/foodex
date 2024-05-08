@@ -1,4 +1,4 @@
-import { metadata } from '../metadata/metadata';
+import { metadata } from '../data/metadata';
 
 class Footer extends HTMLElement {
   constructor() {
@@ -8,8 +8,8 @@ class Footer extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<p tabindex="0">Copyright © 2024 - ${metadata.appName}</p>`;
+    this.innerHTML = `<p tabindex="0">Copyright © 2024 - ${metadata.app}</p>`;
   }
 }
 
-customElements.define('my-footer', Footer);
+customElements.define('custom-footer', Footer);

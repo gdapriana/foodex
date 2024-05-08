@@ -1,0 +1,41 @@
+@use "../variables" as var
+@use "../mixin" as mix
+
+#navigationDrawer
+  position: absolute
+  right: -50%
+  display: none
+  z-index: 9999
+  top: 0
+  padding: 24px
+  height: 100vh
+  width: 50%
+  @include mix.smoothTransition
+  background-color: var.$white-color
+  border-left: var.$border-color 1px solid
+  @media (min-width: var.$lg)
+    @include mix.centerWithFlex()
+    width: auto
+    position: relative
+    height: auto
+    padding: 0
+    right: auto
+    top: auto
+    border-left: none
+
+  ul
+    @include mix.centerWithFlex(center, center, column, 12px)
+    @media (min-width: var.$lg)
+      @include mix.centerWithFlex(center, center, row, 12px)
+    list-style: none
+    li a
+      text-decoration: none
+      color: var.$black-color
+      font-weight: bold
+      @include mix.smoothTransition
+      &:hover
+        color: var.$indigo-color
+
+#navigationDrawer.open
+  right: 0
+  display: block

@@ -1,0 +1,37 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+.restaurant-information
+  display: grid
+  gap: 12px
+  grid-template-areas: "info-1" "info-2" "desc"
+  @media (min-width: var.$max-width)
+    grid-template-areas: "info-1 info-2" "desc desc"
+
+
+  .restaurant-information-1
+    grid-area: info-1
+    .restaurant-information-title
+      color: var.$indigo-color
+
+    .restaurant-information-address-city
+      color: var.$gray-color
+
+  .restaurant-information-2
+    grid-area: info-2
+    .restaurant-information-categories
+      color: var.$gray-color
+
+    .restaurant-information-rating
+      color: var.$black-color
+      @include mix.centerWithFlex(start, center, row, 8px)
+
+      img
+        width: 24px
+
+  .restaurant-information-desc
+    grid-area: desc
+    margin-top: 10px
+    color: var.$black-color
+    font-size: 1.1rem
+    line-height: 1.5rem

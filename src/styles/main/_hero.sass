@@ -1,0 +1,12 @@
+@use "../mixin" as mix
+@use "../variables" as var
+
+#hero-wrapper
+  width: 100%
+  @include mix.centerWithFlex()
+
+  #hero-image
+    width: 100%
+    border-radius: 20px
+    @media (min-width: var.$max-width)
+      width: var.$content-width

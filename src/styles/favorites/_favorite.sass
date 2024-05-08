@@ -1,0 +1,12 @@
+@use '../variables' as var
+@use "../mixin" as mix
+
+#favorited-containter
+  width: 100%
+  max-width: var.$content-width
+  @include mix.centerWithFlex(start, stretch, column, 20px)
+
+  #favorited-wrapper
+    display: grid
+    gap: 24px
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))

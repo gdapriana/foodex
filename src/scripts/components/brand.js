@@ -1,16 +1,18 @@
-import { metadata } from '../metadata/metadata';
+import { metadata } from '../data/metadata';
 
 class Brand extends HTMLElement {
   constructor() {
     super();
-    this.setAttribute('id', 'brand');
+    this.classList.add('brand');
     this.render();
   }
 
   render() {
-    this.innerHTML = `<a href="/" id="brand-link-name">${metadata.appName}</a>
-                     <a href="/" id="brand-link-initial">${metadata.initial}</a> `;
+    this.innerHTML = `
+      <img class="brand-logo" alt='${metadata.app}' src='${metadata.logo}' />
+      <h1 class="brand-text">${metadata.app}</h1>
+    `;
   }
 }
 
-customElements.define('my-brand', Brand);
+customElements.define('custom-brand', Brand);

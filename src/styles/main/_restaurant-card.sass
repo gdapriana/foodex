@@ -1,0 +1,38 @@
+@use "../variables" as var
+@use "../mixin" as mix
+
+.restaurant-card
+  @include mix.centerWithFlex(start, stretch, column, 8px)
+
+  .restaurant-image
+    aspect-ratio: 16/9
+    object-fit: cover
+    border-radius: 10px
+
+  .restaurant-rating
+    @include mix.centerWithFlex(start, center, row, 4px)
+    font-size: .9rem
+    color: var.$black-color
+    .restaurant-rating-logo
+      width: 16px
+
+  .restaurant-title
+    font-size: 1rem
+    color: var.$indigo-color
+
+  .restaurant-desc
+    overflow: hidden
+    display: -webkit-box
+    color: var.$gray-color
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 3
+    font-size: .9rem
+
+  .restaurant-details-link
+    text-decoration: none
+    background-color: var.$indigo-color
+    color: var.$white-color
+    padding: 8px 12px
+    margin-left: auto
+    margin-top: 8px
+    border-radius: 5px
