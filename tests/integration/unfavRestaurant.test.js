@@ -12,7 +12,6 @@ describe('Unfavorited A restaurant', () => {
   afterEach(async () => {
     await IntegrationTest.removeFavRestaurant();
   });
-
   it('should display unlike widget when the restaurant has been favorited', async () => {
     await FavBtnInitiator.init({
       favBtnContainer: document.querySelector('#favorite-container'),

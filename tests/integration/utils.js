@@ -16,6 +16,14 @@ class IntegrationTest {
   static async removeFavRestaurant() {
     await FavoriteRestaurantIdb.deleteRestaurant(1);
   }
+
+  static async createCustomFavRestaurant(id) {
+    await FavoriteRestaurantIdb.putRestaurant({ id });
+  }
+
+  static async deleteCustomFavRestaurant(id) {
+    await FavoriteRestaurantIdb.deleteRestaurant(id);
+  }
 }
 
 export default IntegrationTest;

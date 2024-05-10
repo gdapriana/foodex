@@ -1,4 +1,4 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config';
 
 const restaurantDetail = (restaurant) => `
   <div id="detail-hero" style='background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}")'>
@@ -65,10 +65,10 @@ const restaurantDetail = (restaurant) => `
           <span tabindex="0">Message</span>
           <textarea name="message-input" rows="10" required id="message-input" placeholder="Your message"></textarea>
         </label>
-        <button type="submit">Send</button>
+        <button type="submit" id="review-submit-btn">Send</button>
       </div>
     </form>
   </div>
-`
+`;
 
 export default restaurantDetail;

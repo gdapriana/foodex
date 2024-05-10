@@ -24,10 +24,17 @@ const FavoriteRestaurantIdb = {
     if (!Object.prototype.hasOwnProperty.call(restaurant, 'id')) {
       return;
     }
+    if (restaurant.id === '') return;
     // eslint-disable-next-line consistent-return
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },
   async deleteRestaurant(id) {
+    if (!id) return;
+    // const restaurants = await this.getAllRestaurants();
+    // if (!restaurants.some((item) => item.id === id)) {
+    //   return;
+    // }
+    // eslint-disable-next-line consistent-return
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
 };

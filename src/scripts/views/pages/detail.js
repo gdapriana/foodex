@@ -23,11 +23,22 @@ const Detail = {
       const { restaurant } = await FoodexSource.getRestaurantDetails(url.id);
       detailRoot.innerHTML = restaurantDetail(restaurant);
 
-      document.querySelector('#review-post').addEventListener('submit', async () => {
-        const nameInput = document.querySelector('#name-input').value;
-        const messageInput = document.querySelector('#message-input').value;
-        await postReview(url, nameInput, messageInput);
+      const submitReviewForm = document.querySelector('#review-post');
+      const reviewName = document.querySelector('#name-input');
+      const reviewMessage = document.querySelector('#message-input');
+
+      submitReviewForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        await postReview(url, reviewName.value, reviewMessage.value);
+        reviewName.value = '';
+        reviewMessage.value = '';
       });
+
+      // document.querySelector('#review-post').addEventListener('submit', async () => {
+      //   const nameInput = document.querySelector('#name-input').value;
+      //   const messageInput = document.querySelector('#message-input').value;
+      //   await postReview(url, nameInput, messageInput);
+      // });
 
       await FavBtnInitiator.init({
         favBtnContainer: document.querySelector('#favorite-container'),
@@ -37,6 +48,7 @@ const Detail = {
           rating: restaurant.rating,
           pictureId: restaurant.pictureId,
           description: restaurant.description,
+          city: restaurant.city,
         },
       });
 
