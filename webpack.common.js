@@ -7,8 +7,8 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-
-
+ 
+ 
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),

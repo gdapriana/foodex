@@ -9,7 +9,7 @@ class NavigationsDrawer extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<button tabindex="0" id="close-nav-btn" aria-label="close drawer button"><img src="/close.svg" /></button>`
+    this.innerHTML = `<button tabindex="0" id="close-nav-btn" aria-label="close drawer button"><img src="/images/close.svg" / alt="close nav"></button>`
     for (let i = 0; i < routes.length; i += 1) {
       const link = document.createElement('a');
       link.setAttribute('href', routes[i].route);
