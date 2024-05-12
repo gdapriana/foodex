@@ -2,9 +2,9 @@ import CONFIG from '../../globals/config';
 
 const restaurantCard = (restaurant) => `
   <article tabindex="0" class="restaurant-card">
-    <img class="restaurant-image" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name} image">
+    <img class="restaurant-image lazyload" crossorigin="anonymous" src="/images/slug-img.png" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name} image">
     <span tabindex="0" class="restaurant-rating">
-        <img class="restaurant-rating-logo" src="/star.png" alt="rating">
+        <img class="restaurant-rating-logo" src="/images/star.png" alt="rating">
         ${restaurant.rating} Ratings
     </span>
     <h3 tabindex="0" class="restaurant-title">

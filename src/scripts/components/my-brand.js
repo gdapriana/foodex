@@ -11,7 +11,7 @@ class MyBrand extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <img src="${this._logo}" />
+      <img src="${this._logo}"  alt="logo"/>
       <h1>${this._text}</h1>
     `;
   }

@@ -6,8 +6,7 @@ class Loader extends HTMLElement {
   }
 
   render() {
-    this.innerHTML =
-      '<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>';
+    this.innerHTML = '<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>';
   }
 }
 

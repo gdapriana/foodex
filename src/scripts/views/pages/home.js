@@ -7,12 +7,15 @@ import restaurantCard from '../components/restaurant-card';
 const Home = {
   async render() {
     return `
-
-      <div id="hero" style='background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("/hero-image.jpg")'>
+      <div id="hero">
+        <picture>
+          <source media="(max-width: 768px)" srcset="./images/hero/hero-image-small.jpg">
+          <img src="./images/hero/hero-image-large.jpg" alt="hero image">
+        </picture>
         <article>
           <h1 tabindex="0">Welcome to <span>${metadata.app}</span></h1>
           <h3 tabindex="0">${metadata.description}</h3>
-          <a href="#"><img src="/rocket.svg" />Explore Now</a>
+          <a href="#"><img src="/images/rocket.svg"  alt="rocket"/>Explore Now</a>
         </article>
       </div>
 

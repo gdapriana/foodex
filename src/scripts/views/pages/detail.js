@@ -34,12 +34,6 @@ const Detail = {
         reviewMessage.value = '';
       });
 
-      // document.querySelector('#review-post').addEventListener('submit', async () => {
-      //   const nameInput = document.querySelector('#name-input').value;
-      //   const messageInput = document.querySelector('#message-input').value;
-      //   await postReview(url, nameInput, messageInput);
-      // });
-
       await FavBtnInitiator.init({
         favBtnContainer: document.querySelector('#favorite-container'),
         restaurant: {

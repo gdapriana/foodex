@@ -2,7 +2,7 @@ export const metadata = {
   app: 'foodex',
   description:
     'Explore a comprehensive platform designed to help you discover and locate delicious food options across Indonesia.',
-  logo: '/logo.png',
+  logo: '/images/logo.png',
 };
 
 export const routes = [

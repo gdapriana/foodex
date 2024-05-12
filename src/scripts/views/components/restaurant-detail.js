@@ -6,16 +6,16 @@ const restaurantDetail = (restaurant) => `
       <div id="favoriteBtn"></div>
       <h1 tabindex="0" class="detail-hero-content-title">${restaurant.name}</h1>
       <div class="detail-hero-content-add-rat">
-      <p tabindex="0" class="detail-hero-content-address"><img src="/map-pinned.svg" />${restaurant.address}, ${restaurant.city}</p>
+      <p tabindex="0" class="detail-hero-content-address"><img src="/images/map-pinned.svg"  alt="pinned"/>${restaurant.address}, ${restaurant.city}</p>
       <p aria-label="rating" tabindex="0" class="detail-hero-content-rating">
-        <img src="/star.png" />
+        <img src="/images/star.png"  alt="star rating"/>
         <span tabindex="0">${restaurant.rating} Ratings</span>
       </p>
       </div>
       <p tabindex="0" class="detail-hero-content-description">${restaurant.description}</p>
       <div class="detail-hero-content-cat-fav">
         <div tabindex="0" aria-label="categories" class="detail-hero-content-categories">
-          ${restaurant.categories.map((category) => `<span tabindex="0" class="category-item"><img src="/tally-1.svg"/>${category.name}</span>`).join('')}
+          ${restaurant.categories.map((category) => `<span tabindex="0" class="category-item"><img src="/images/tally-1.svg" alt="tally"/>${category.name}</span>`).join('')}
         </div>
         <div id="favorite-container">Hello World</div>
       </div>
@@ -27,7 +27,7 @@ const restaurantDetail = (restaurant) => `
     <div id="food-menu-wrapper" class="menu-wrapper">
      ${restaurant.menus.foods.map((menu) => `
       <article class="menu-item" tabindex="0">
-        <p><img src="/salad.svg" />${menu.name}</p>
+        <p><img src="/images/salad.svg" alt="salad"/>${menu.name}</p>
       </article>`).join('')}
     </div>
   </div>
@@ -37,7 +37,7 @@ const restaurantDetail = (restaurant) => `
     <div id="drink-menu-wrapper" class="menu-wrapper">
      ${restaurant.menus.drinks.map((menu) => `
       <article class="menu-item" tabindex="0">
-        <p><img src="/beer.svg" />${menu.name}</p>
+        <p><img src="/images/beer.svg" alt="beer"/>${menu.name}</p>
       </article>`).join('')}
     </div>
   </div>
