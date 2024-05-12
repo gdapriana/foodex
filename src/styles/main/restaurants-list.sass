@@ -1,0 +1,9 @@
+@use '../others/mixin' as mix
+@use '../others/sizes' as siz
+@use '../others/colors' as col
+
+#home-restaurants-wrapper
+  display: grid
+  column-gap: siz.$defaultSize * 4
+  row-gap: siz.$defaultSize * 8
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))

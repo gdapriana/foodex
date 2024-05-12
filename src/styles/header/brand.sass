@@ -1,0 +1,17 @@
+@use '../others/mixin' as mix
+@use '../others/sizes' as siz
+@use '../others/colors' as col
+
+.brand
+  @include mix.centerWithFlex()
+  
+  img
+    width: siz.$defaultSize * 12
+
+  h1
+    display: none
+    color: col.$cyan-800
+    @media (min-width: siz.$md)
+      display: inline
+
+  

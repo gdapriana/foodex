@@ -1,0 +1,18 @@
+@use '../others/mixin' as mix
+@use '../others/sizes' as siz
+@use '../others/colors' as col
+
+#hamburger
+  @include mix.centerWithFlex()
+  background-color: transparent
+  border: none
+  cursor: pointer
+  padding: siz.$defaultSize * 1
+  border-radius: siz.$defaultSize * 1
+  &:hover
+    background-color: col.$cyan-050
+  @media (min-width: siz.$md)
+    display: none
+
+  img
+    width: siz.$defaultSize * 8

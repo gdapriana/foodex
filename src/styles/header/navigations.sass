@@ -1,0 +1,39 @@
+@use '../others/mixin' as mix
+@use '../others/sizes' as siz
+@use '../others/colors' as col
+
+#navigations
+  display: none
+  position: relative
+  @media (min-width: siz.$md)
+    @include mix.centerWithFlex(center, center, row, siz.$defaultSize * 4)
+
+  #close-nav-btn
+    position: absolute
+    top: siz.$defaultSize * 2
+    right: siz.$defaultSize * 2
+    background-color: transparent
+    border: none 
+    @media (min-width: siz.$md)
+      display: none
+
+  a
+    text-decoration: none
+    color: col.$cyan-700
+    font-weight: bold
+    @include mix.smoothTransition()
+    @include mix.centerWithFlex()
+    &:hover
+      color: col.$cyan-500
+    
+
+#navigations.open
+  position: absolute
+  right: 0
+  top: 0
+  height: 100vh
+  background-color: white
+  border-left: 2px solid col.$slate-100
+  width: 75%
+  z-index: 999
+  @include mix.centerWithFlex(center, center, column, 0)

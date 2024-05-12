@@ -1,0 +1,62 @@
+{
+  "id": "foodex",
+  "start_url": "./index.html",
+  "name": "foodex: food explorer",
+  "short_name": "fd",
+  "description": "Explore a comprehensive platform designed to help you discover and locate delicious food options across Indonesia.",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0E7490",
+  "icons": [
+    {
+      "src": "/icons/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/ss-potrait.png",
+      "type": "image/png",
+      "sizes": "390x540",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshots/ss-wide.png",
+      "type": "image/png",
+      "sizes": "1062x687",
+      "form_factor": "wide"
+    }
+  ]
+}

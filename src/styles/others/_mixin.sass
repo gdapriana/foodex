@@ -1,0 +1,16 @@
+@mixin centerWithFlex($justify: center, $items: center, $direction: row, $gap: 12px)
+  display: flex
+  justify-content: $justify
+  align-items: $items
+  flex-direction: $direction
+  gap: $gap
+  
+@mixin smoothTransition($duration: .3s)
+  transition: all ease-in-out $duration
+
+@mixin lineClamp($line: 2)
+  overflow: hidden
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $line
+  
