@@ -28,6 +28,13 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const skipLinkEl = document.querySelector('.skip-content');
+    skipLinkEl.addEventListener('click', (event) => {
+        event.preventDefault();
+        document.querySelector('#main-wrapper').focus();
+    });
+
   }
 }
 
