@@ -1,38 +1,8 @@
-## Submission: Katalog Restoran
+# Menjadi Front-End Web Developer Expert
 
-![example](src/public/images/example.png)
+Kelas ini terdiri dari 6 (enam) modul atau pembahasan pokok. Selama mengikuti kelas ini beberapa modul mengharuskan Anda berlatih membuat proyek Web Application, hingga pada modul akhir Anda berhasil membuat Web Application yang memiliki responsibilitas, aksesibilitas, performa, dan kemampuan native dengan baik. Selain itu Anda juga akan belajar prinsip Clean Code pada JavaScript dan belajar banyak mengenai testing. 
 
-
-| Field | Information |
-|---|---|
-| Student Name | I KOMANG GEDE APRIANA (gedeapriana) |
-| Submission ID | 2961493 |
-| Course | [Menjadi Front-End Web Developer Expert](https://www.dicoding.com/academies/163) |
-| Dikirim pada | 	04-Apr-2024 01:44:23 |
-| Submission | [Submission: Katalog Restoran](https://www.dicoding.com/academies/219/tutorials/9301) |
-| Tipe | Token: SIB Cycle 6 Cohort - FEBE |
-| Stars | ![start](src/public/images/stars.png) |
-
-Anda telah belajar hal-hal berikut.
-
-- Menerapkan dasar responsibilitas tampilan pada perangkat seluler (Implementing Small Things).
-- Menerapkan layout yang responsif menggunakan @media query dan grid css (Implementing Responsive Layout).
-- Optimisasi elemen UI seperti menerapkan navigation drawer, dan menetapkan jarak teks yang sesuai (Other Optimization).
-- Menggunakan focus dan screen reader untuk menginput data di website (Experiencing Focus & Experiencing Screen Reader).
-- Untuk mempelajari modul berikutnya, kirimkan proyek aplikasi web dengan tema Katalog Restoran. Aplikasi memiliki satu halaman statis yang menampilkan daftar restoran sesuai dengan data yang diberikan.
-
-Untuk mempelajari modul berikutnya, kirimkan proyek aplikasi web dengan tema Katalog Restoran. Aplikasi memiliki satu halaman statis yang menampilkan daftar restoran sesuai dengan data yang diberikan.
-
-## Kriteria
-- [x] App Bar (Navigation Bar)
-- [x] ero Element (Jumbotron Element)
-- [x] Daftar Restoran
-- [x] Footer
-- [x] Responsibilitas Tampilan (menggunakan grid, flexbox)
-- [x] Aksesibilitas Website
-
-## Kriteria Opsional
-- [x] Menerapkan tampilan aplikasi yang menarik
-- [x] Terdapat konten tambahan yang relevan dengan tema aplikasi atau di luar dari data yang disediakan. (dalam hal ini, data yang ditambahkan berupa kategori dari makanan)
-- [x] Menggunakan elemen secara bijak sesuai dengan fungsinya
-- [x] Telah menggunakan css preprocessor (SASS)
+| **Proyek** | **Link** |
+| Proyek Pertama, Katalog Restoran | Akses [disini](https://gitlab.com/dicoding-workspaces/submissions/foodex/-/tree/proyek-awal?ref_type=heads) |
+| Proyek Kedua, Katalog Restoran + PWA | Akses [disini](https://gitlab.com/dicoding-workspaces/submissions/foodex/-/tree/proyek-kedua?ref_type=heads) |
+| Proyek Ketiga, Katalog Restoran PWA + Testing and Optimized | Akses [disini](https://gitlab.com/dicoding-workspaces/submissions/foodex/-/tree/proyek-akhir?ref_type=heads) |
